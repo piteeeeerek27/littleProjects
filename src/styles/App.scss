@@ -1,0 +1,100 @@
+.App {
+	box-sizing: border-box;
+	width: 80vw;
+	height: 100vh;
+	margin-top: 1rem;
+	ul {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		list-style: none;
+		.AppGame {
+			position: relative;
+			cursor: pointer;
+			&::before {
+				content: "";
+				position: absolute;
+				border-radius: 5%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+				padding: 2rem 8rem;
+				object-fit: cover;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-image: url("https://images-na.ssl-images-amazon.com/images/I/81DbB-oG4pL._AC_SX355_.jpg");
+				transition: transform 300ms ease-in-out;
+				transform: scale(1);
+			}
+			&:hover::before,
+			&:focus::before {
+				transform: scale(1.1);
+			}
+			& {
+				z-index: 1;
+			}
+			.AppGameA {
+				font-size: 7rem;
+				opacity: 0.5;
+				height: 100%;
+			}
+			a {
+				color: whitesmoke;
+				text-decoration: none;
+			}
+		}
+		.AppCrypto {
+			position: relative;
+			cursor: pointer;
+			&::before {
+				content: "";
+				position: absolute;
+				border-radius: 5%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+				padding: 2rem 8rem;
+				object-fit: contain;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-image: url("https://static.coindesk.com/wp-content/uploads/2018/11/dark-bitcoin-scaled.jpg");
+				transition: transform 300ms ease-in-out;
+				transform: scale(1);
+			}
+			&:hover::before,
+			&:focus::before {
+				transform: scale(1.1);
+			}
+			& {
+				z-index: 1;
+			}
+			.AppCryptoA {
+				font-size: 7rem;
+				opacity: 0.5;
+				height: 100%;
+			}
+			a {
+				color: whitesmoke;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 770px) {
+	.AppUl {
+		display: flex;
+		flex-direction: column;
+		margin-top: 2rem;
+		.AppCrypto {
+			margin-bottom: 1rem;
+		}
+		.AppGame {
+			margin-top: 1rem;
+		}
+	}
+}

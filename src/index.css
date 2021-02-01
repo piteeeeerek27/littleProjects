@@ -1,13 +1,23 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::after,
+*::before {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100vmin;
+	width: 100%;
+	background: url("https://i.pinimg.com/originals/01/89/21/018921aece544b98bb6e79edba46dad8.jpg");
+	background-repeat: no-repeat;
+	display: grid;
+	place-items: center;
+	object-fit: contain;
+	background-size: cover;
 }
