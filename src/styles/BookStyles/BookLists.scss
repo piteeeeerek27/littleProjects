@@ -1,0 +1,10 @@
+.BookLists {
+	width: 90%;
+	margin: 2rem auto;
+	display: flex;
+	h2 {
+		display: flex;
+		flex-direction: column;
+		margin: 0 1rem;
+	}
+}

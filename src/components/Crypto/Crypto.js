@@ -44,7 +44,7 @@ function Crypto() {
 				SELL: item[valueFromInput].sell,
 				SYMBOL: item[valueFromInput].symbol.toUpperCase(),
 			};
-			setCur(ObjectOfAllValues);
+			return setCur(ObjectOfAllValues);
 		});
 	};
 

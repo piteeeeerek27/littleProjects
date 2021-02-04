@@ -5,19 +5,3 @@
 	box-sizing: border-box;
 	padding: 0;
 }
-
-html {
-	height: 100%;
-	width: 100%;
-}
-
-body {
-	height: 100vmin;
-	width: 100%;
-	background: url("https://i.pinimg.com/originals/01/89/21/018921aece544b98bb6e79edba46dad8.jpg");
-	background-repeat: no-repeat;
-	display: grid;
-	place-items: center;
-	object-fit: contain;
-	background-size: cover;
-}

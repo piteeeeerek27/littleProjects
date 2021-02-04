@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
+body {
+	font-family: "Sriracha", cursive;
+}
+.LocalStorage {
+	height: 100vh;
+	width: 75%;
+	color: white;
+	margin: 1rem auto 5rem auto;
+	overflow: scroll;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	.Top {
+		background: rgb(19, 0, 146);
+		height: 30%;
+		font-size: 1.8rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		&:hover {
+			background: rgb(15, 0, 112);
+			opacity: 0.9;
+			cursor: pointer;
+		}
+	}
+	.Bottom {
+		display: flex;
+		flex-direction: column;
+		background: rgb(5, 0, 41);
+		.BottomH {
+			margin: 2rem 0;
+		}
+		.Output {
+			color: whitesmoke;
+			height: 40%;
+			width: 90%;
+			.OutputImage {
+				height: 100%;
+				width: 100%;
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+		h3 {
+			font-size: 1.5rem;
+			text-align: center;
+			margin: 2rem 0;
+		}
+		.BottomInput {
+			width: 70%;
+			margin: 0.5rem auto;
+			padding: 0.7rem 1rem;
+			outline-width: 0;
+			background: transparent;
+			color: whitesmoke;
+			&::placeholder {
+				color: whitesmoke;
+			}
+		}
+		.BottomBtn {
+			width: 35%;
+			padding: 0.5rem 1rem;
+			margin: 1rem auto;
+			font-size: 1.5rem;
+			background: transparent;
+			color: whitesmoke;
+			&:hover {
+				background: rgb(10, 1, 80);
+				cursor: pointer;
+			}
+		}
+	}
+}

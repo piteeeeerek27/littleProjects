@@ -1,8 +1,20 @@
+* {
+}
 .App {
 	box-sizing: border-box;
 	width: 80vw;
 	height: 100vh;
-	margin-top: 1rem;
+	overflow: scroll;
+	width: 100%;
+	background: url("https://i.pinimg.com/originals/01/89/21/018921aece544b98bb6e79edba46dad8.jpg");
+	background-repeat: no-repeat;
+	display: grid;
+	place-items: center;
+	object-fit: contain;
+	background-size: cover;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 	ul {
 		display: flex;
 		justify-content: space-around;
@@ -11,6 +23,7 @@
 		.AppGame {
 			position: relative;
 			cursor: pointer;
+			margin-bottom: 2rem;
 			&::before {
 				content: "";
 				position: absolute;
@@ -73,6 +86,43 @@
 				z-index: 1;
 			}
 			.AppCryptoA {
+				font-size: 7rem;
+				opacity: 0.5;
+				height: 100%;
+			}
+			a {
+				color: whitesmoke;
+				text-decoration: none;
+			}
+		}
+		.AppBook {
+			position: relative;
+			cursor: pointer;
+			&::before {
+				content: "";
+				position: absolute;
+				border-radius: 5%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+				padding: 2rem 8rem;
+				object-fit: contain;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-image: url("https://images.squarespace-cdn.com/content/v1/56bf8adad51cd4587e5f14b2/1514572181808-ERMYYQNWJQXHHRC2NO1H/ke17ZwdGBToddI8pDm48kDdjP6q7PNCkw4Qep81kHxl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1Ue4MnKmAUS0E6M-InQ5AtKmQukWwcizG_Vlz3TWZ47gx1trlVMuTSyYUsJBPcSHLtA/best-books-book-youll-ever-read.jpg");
+				transition: transform 300ms ease-in-out;
+				transform: scale(1);
+			}
+			&:hover::before,
+			&:focus::before {
+				transform: scale(1.1);
+			}
+			& {
+				z-index: 1;
+			}
+			.AppBookA {
 				font-size: 7rem;
 				opacity: 0.5;
 				height: 100%;

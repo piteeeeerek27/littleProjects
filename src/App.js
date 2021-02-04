@@ -3,6 +3,8 @@ import "./styles/App.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Crypto from "./components/Crypto/Crypto";
 import Game from "./components/Game/Game";
+import LocalStorage from "./components/Book/LocalStorage";
+import BookProvider from "./components/Book/BookContext";
 
 const App = () => {
 	return (
@@ -20,11 +22,19 @@ const App = () => {
 								GAME
 							</Link>
 						</li>
+						<li className="AppBook">
+							<Link className="AppBookA" to="/book">
+								BOOK
+							</Link>
+						</li>
 					</ul>
 				</nav>
 				<Switch>
 					<Route path="/crypto" component={Crypto} />
 					<Route path="/game" component={Game} />
+					<BookProvider>
+						<Route path="/book" component={LocalStorage} />
+					</BookProvider>
 				</Switch>
 			</div>
 		</Router>
