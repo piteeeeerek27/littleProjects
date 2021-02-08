@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/CryptoStyles/Game/Game.scss";
+import "../../styles/Game/Game.scss";
 
 const GameTime = () => {
 	const off = {
@@ -25,7 +25,6 @@ const GameTime = () => {
 			}),
 		);
 	};
-	// const interval = clearInterval(interval);
 
 	return (
 		<div className="GameTime">

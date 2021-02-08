@@ -1,5 +1,3 @@
-* {
-}
 .App {
 	box-sizing: border-box;
 	width: 80vw;
@@ -12,6 +10,7 @@
 	place-items: center;
 	object-fit: contain;
 	background-size: cover;
+	padding: 0 2rem;
 	&::-webkit-scrollbar {
 		display: none;
 	}
@@ -23,7 +22,7 @@
 		.AppGame {
 			position: relative;
 			cursor: pointer;
-			margin-bottom: 2rem;
+			margin: 2rem 5rem;
 			&::before {
 				content: "";
 				position: absolute;
