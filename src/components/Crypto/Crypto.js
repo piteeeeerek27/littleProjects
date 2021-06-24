@@ -19,8 +19,11 @@ function Crypto() {
 			const data = await res.data;
 			setBtc(data);
 		};
-		const interval = setInterval(fetchData(), 5000);
-		clearInterval(interval);
+		const interval = setInterval(fetchData(), 1000);
+
+		return () => {
+			clearInterval(interval);
+		};
 	}, [btc]);
 
 	const Names = Object.keys(btc);
@@ -29,8 +32,8 @@ function Crypto() {
 		e.preventDefault();
 		setInput("");
 	};
-	const inputChange = (e) => {
-		setInput(e.target.value);
+	const inputChange = (event) => {
+		setInput(event.target.value);
 	};
 
 	const showAll = () => {
