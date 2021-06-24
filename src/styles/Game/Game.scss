@@ -1,22 +1,22 @@
-.GameTime {
+.Game {
 	height: 80%;
 	width: 100%;
 	background: transparent;
 	color: whitesmoke;
 	margin: 4rem 0;
 	box-sizing: border-box;
-}
-.grid {
-	display: grid;
-	grid-template: repeat(5, 1fr) / repeat(10, 1fr);
-	width: 100%;
-}
-.spaned {
-	border: 2px solid black;
-	padding: 3rem 0;
-	transition: all 200ms linear;
-}
-.spaned:hover {
-	transform: scale(1.15);
-	cursor: pointer;
+	.grid {
+		display: grid;
+		grid-template: repeat(5, 1fr) / repeat(10, 1fr);
+		width: 100%;
+		.spaned {
+			border: 2px solid black;
+			padding: 3rem 0;
+			transition: all 200ms linear;
+		}
+		.spaned:hover {
+			transform: scale(1.15);
+			cursor: pointer;
+		}
+	}
 }

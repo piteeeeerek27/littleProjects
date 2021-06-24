@@ -6,27 +6,30 @@ import BookList from "./BookList";
 const LocalStorage = () => {
 	const [title, setTitle] = useState("");
 	const [author, setAuthor] = useState("");
+	const [image, setImage] = useState("");
 	const { books, dispatch } = useContext(BooksContext);
 
-	const submitBook = (e) => {
-		e.preventDefault();
+	const submitBook = (event) => {
+		event.preventDefault();
 		dispatch({
 			type: "ADD_BOOK",
 			book: {
 				title,
 				author,
+				image,
 			},
 		});
 		setTitle("");
 		setAuthor("");
+		setImage("");
 	};
 
 	return (
 		<div className="LocalStorage">
 			<div className="Top">
-				<h1>My Reading List</h1>
+				<h1>My Book List</h1>
 				{books.length ? (
-					<h3>U have {books.length} books readed</h3>
+					<h3>You have {books.length} books readed</h3>
 				) : (
 					<h3>No books to read.</h3>
 				)}
@@ -35,17 +38,24 @@ const LocalStorage = () => {
 				<span className="BottomH"></span>
 				<input
 					value={title}
-					onChange={(e) => setTitle(e.target.value)}
+					onChange={(event) => setTitle(event.target.value)}
 					className="BottomInput"
 					type="text"
 					placeholder="book title"
 				/>
 				<input
 					value={author}
-					onChange={(e) => setAuthor(e.target.value)}
+					onChange={(event) => setAuthor(event.target.value)}
 					className="BottomInput"
 					type="text"
 					placeholder="author"
+				/>
+				<input
+					value={image}
+					onChange={(event) => setImage(event.target.value)}
+					className="BottomInput"
+					type="text"
+					placeholder="put url"
 				/>
 				<input type="submit" className="BottomBtn" value="ADD BOOK" />
 				<hr />

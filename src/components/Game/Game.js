@@ -27,7 +27,7 @@ const GameTime = () => {
 	};
 
 	return (
-		<div className="GameTime">
+		<div className="Game">
 			<div className="grid">
 				{cells.map((cell, i) => (
 					<div

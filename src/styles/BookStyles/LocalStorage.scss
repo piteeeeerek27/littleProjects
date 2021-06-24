@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
+@import "./bookMixins.scss";
+@import "../../variables.scss";
+
 body {
 	font-family: "Sriracha", cursive;
 }
 .LocalStorage {
 	height: 100vh;
 	width: 75%;
-	color: white;
+	color: $color-whitesmoke;
 	margin: 1rem auto 5rem auto;
 	overflow: scroll;
 	&::-webkit-scrollbar {
@@ -13,27 +16,33 @@ body {
 	}
 	.Top {
 		background: rgb(19, 0, 146);
-		height: 30%;
+		min-height: 30%;
 		font-size: 1.5rem;
-		display: flex;
-		flex-direction: column;
+		@include flexColumn;
 		justify-content: center;
 		align-items: center;
+		h1,
+		h3 {
+			@include transform;
+		}
 		&:hover {
 			background: rgb(15, 0, 112);
 			opacity: 0.9;
 			cursor: pointer;
+			h1,
+			h3 {
+				@include transform;
+			}
 		}
 	}
 	.Bottom {
-		display: flex;
-		flex-direction: column;
+		@include flexColumn;
 		background: rgb(5, 0, 41);
 		.BottomH {
 			margin: 2rem 0;
 		}
 		.Output {
-			color: whitesmoke;
+			color: $color-whitesmoke;
 			height: 40%;
 			width: 90%;
 			.OutputImage {
@@ -57,9 +66,9 @@ body {
 			padding: 0.7rem 1rem;
 			outline-width: 0;
 			background: transparent;
-			color: whitesmoke;
+			color: $color-whitesmoke;
 			&::placeholder {
-				color: whitesmoke;
+				color: $color-whitesmoke;
 			}
 		}
 		.BottomBtn {
@@ -68,7 +77,7 @@ body {
 			margin: 1rem auto;
 			font-size: 1.2rem;
 			background: transparent;
-			color: whitesmoke;
+			color: $color-whitesmoke;
 			&:hover {
 				background: rgb(10, 1, 80);
 				cursor: pointer;

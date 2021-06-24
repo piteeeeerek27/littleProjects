@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/App.scss";
+import "./App.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Crypto from "./components/Crypto/Crypto";
 import Game from "./components/Game/Game";
@@ -13,17 +13,17 @@ const App = () => {
 				<nav>
 					<ul className="AppUl">
 						<li className="AppCrypto">
-							<Link className="AppCryptoA" to="/crypto">
+							<Link className="AppCryptoBox" to="/crypto">
 								CRYPTO
 							</Link>
 						</li>
 						<li className="AppGame">
-							<Link className="AppGameA" to="/game">
+							<Link className="AppGameBox" to="/game">
 								GAME
 							</Link>
 						</li>
 						<li className="AppBook">
-							<Link className="AppBookA" to="/book">
+							<Link className="AppBookBox" to="/book">
 								BOOK
 							</Link>
 						</li>

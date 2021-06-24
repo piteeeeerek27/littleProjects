@@ -1,3 +1,6 @@
+@import "./appMixins.scss";
+@import "./variables.scss";
+
 .App {
 	box-sizing: border-box;
 	width: 80vw;
@@ -24,111 +27,63 @@
 			cursor: pointer;
 			margin: 2rem 5rem;
 			&::before {
-				content: "";
-				position: absolute;
-				border-radius: 5%;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				z-index: -1;
-				padding: 2rem 8rem;
-				object-fit: cover;
-				background-size: cover;
-				background-repeat: no-repeat;
+				@include beforeStuff;
 				background-image: url("https://images-na.ssl-images-amazon.com/images/I/81DbB-oG4pL._AC_SX355_.jpg");
-				transition: transform 300ms ease-in-out;
-				transform: scale(1);
 			}
 			&:hover::before,
 			&:focus::before {
-				transform: scale(1.1);
+				@include beforeHoverFocus;
 			}
 			& {
 				z-index: 1;
 			}
-			.AppGameA {
-				font-size: 7rem;
-				opacity: 0.5;
-				height: 100%;
+			.AppGameBox {
+				@include enterGameBox;
 			}
 			a {
-				color: whitesmoke;
-				text-decoration: none;
+				@include linkStyles;
 			}
 		}
 		.AppCrypto {
 			position: relative;
 			cursor: pointer;
 			&::before {
-				content: "";
-				position: absolute;
-				border-radius: 5%;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				z-index: -1;
-				padding: 2rem 8rem;
-				object-fit: contain;
-				background-size: cover;
-				background-repeat: no-repeat;
+				@include beforeStuff;
 				background-image: url("https://static.coindesk.com/wp-content/uploads/2018/11/dark-bitcoin-scaled.jpg");
-				transition: transform 300ms ease-in-out;
-				transform: scale(1);
 			}
 			&:hover::before,
 			&:focus::before {
-				transform: scale(1.1);
+				@include beforeHoverFocus;
 			}
 			& {
 				z-index: 1;
 			}
-			.AppCryptoA {
-				font-size: 7rem;
-				opacity: 0.5;
-				height: 100%;
+			.AppCryptoBox {
+				@include enterGameBox;
 			}
 			a {
-				color: whitesmoke;
-				text-decoration: none;
+				@include linkStyles;
 			}
 		}
 		.AppBook {
 			position: relative;
 			cursor: pointer;
 			&::before {
-				content: "";
-				position: absolute;
-				border-radius: 5%;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				z-index: -1;
-				padding: 2rem 8rem;
-				object-fit: contain;
-				background-size: cover;
-				background-repeat: no-repeat;
+				@include beforeStuff;
 				background-image: url("https://images.squarespace-cdn.com/content/v1/56bf8adad51cd4587e5f14b2/1514572181808-ERMYYQNWJQXHHRC2NO1H/ke17ZwdGBToddI8pDm48kDdjP6q7PNCkw4Qep81kHxl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1Ue4MnKmAUS0E6M-InQ5AtKmQukWwcizG_Vlz3TWZ47gx1trlVMuTSyYUsJBPcSHLtA/best-books-book-youll-ever-read.jpg");
-				transition: transform 300ms ease-in-out;
-				transform: scale(1);
 			}
 			&:hover::before,
 			&:focus::before {
-				transform: scale(1.1);
+				@include beforeHoverFocus;
 			}
 			& {
 				z-index: 1;
 			}
-			.AppBookA {
-				font-size: 7rem;
-				opacity: 0.5;
-				height: 100%;
+			.AppBookBox {
+				@include enterGameBox;
 			}
 			a {
-				color: whitesmoke;
-				text-decoration: none;
+				@include linkStyles;
 			}
 		}
 	}

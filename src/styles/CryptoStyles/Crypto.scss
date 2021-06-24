@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+@import "../../variables.scss";
+
 body {
 	font-family: "Potta One", cursive;
 }
@@ -12,7 +14,7 @@ body {
 	background: #000;
 	opacity: 0.7;
 	h1 {
-		color: whitesmoke;
+		color: $color-whitesmoke;
 	}
 	.CryptoValues {
 		display: flex;
@@ -25,7 +27,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: auto;
-	color: whitesmoke;
+	color: $color-whitesmoke;
 	background: #000;
 	opacity: 0.7;
 }

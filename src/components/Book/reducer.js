@@ -7,6 +7,7 @@ const bookReducer = (state, action) => {
 				{
 					title: action.book.title,
 					author: action.book.author,
+					image: action.book.image,
 					id: uuid(),
 				},
 			];

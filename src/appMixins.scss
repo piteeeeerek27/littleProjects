@@ -1,0 +1,28 @@
+@mixin beforeHoverFocus {
+	transform: scale(1.1);
+}
+@mixin beforeStuff {
+	content: "";
+	border-radius: 5%;
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 2rem 8rem;
+	object-fit: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: transform 300ms ease-in-out;
+	transform: scale(1);
+}
+@mixin enterGameBox {
+	font-size: 7rem;
+	opacity: 0.5;
+	height: 100%;
+}
+@mixin linkStyles {
+	color: $color-whitesmoke;
+	text-decoration: none;
+}
