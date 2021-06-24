@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { BooksContext } from "./BookContext";
 import "../../styles/BookStyles/LocalStorage.scss";
-import BookList from "./BookList";
+import ListOfBooks from "./ListOfBooks";
 
 const LocalStorage = () => {
 	const [title, setTitle] = useState("");
@@ -11,14 +11,24 @@ const LocalStorage = () => {
 
 	const submitBook = (event) => {
 		event.preventDefault();
-		dispatch({
-			type: "ADD_BOOK",
-			book: {
-				title,
-				author,
-				image,
-			},
-		});
+		const book = {
+			title,
+			author,
+			image,
+		};
+		if (
+			(author === "" && title === "") ||
+			(author === "" && title === "" && image === "")
+		)
+			return alert("There is no book to add");
+		if (
+			(author !== "" && title !== "") ||
+			(author !== "" && title !== "" && image !== "")
+		)
+			dispatch({
+				type: "ADD_BOOK",
+				book,
+			});
 		setTitle("");
 		setAuthor("");
 		setImage("");
@@ -27,9 +37,9 @@ const LocalStorage = () => {
 	return (
 		<div className="LocalStorage">
 			<div className="Top">
-				<h1>My Book List</h1>
+				<h1>My Books List</h1>
 				{books.length ? (
-					<h3>You have {books.length} books readed</h3>
+					<h3>U have {books.length} books readed</h3>
 				) : (
 					<h3>No books to read.</h3>
 				)}
@@ -57,9 +67,11 @@ const LocalStorage = () => {
 					type="text"
 					placeholder="put url"
 				/>
-				<input type="submit" className="BottomBtn" value="ADD BOOK" />
+				<button type="submit" className="BottomBtn">
+					ADD BOOK
+				</button>
 				<hr />
-				<BookList />
+				<ListOfBooks />
 			</form>
 		</div>
 	);

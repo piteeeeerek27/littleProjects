@@ -2,8 +2,9 @@ import React, { useContext } from "react";
 import { BooksContext } from "./BookContext";
 import BookLists from "./BookLists";
 
-const BookList = () => {
+const ListOfBooks = () => {
 	const { books } = useContext(BooksContext);
+
 	return books.length ? (
 		<div className="Output">
 			{books.map((book) => {
@@ -15,4 +16,4 @@ const BookList = () => {
 	);
 };
 
-export default BookList;
+export default ListOfBooks;
